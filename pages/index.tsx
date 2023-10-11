@@ -1,13 +1,25 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Button, Htag, P, Tag } from "@/components/index";
+import { log } from "console";
 
 
 
 export default function Home(): JSX.Element {
+  const [counter, setCounter] = useState<number>(0);
+
+  useEffect(() => {
+    console.log('Counter ' + counter);
+    return function cleanUp() {
+      console.log('unmount ');
+      
+    }
+    
+  })
+
   return (
     <>
-      <Htag tag='h1'>Текст</Htag>
-      <Button appearance="primary" arrow="right">кнопка</Button>
+      <Htag tag='h1'>{counter}</Htag>
+      <Button appearance="primary" arrow="right" onClick={() => setCounter(counter + 1)}>кнопка</Button>
       <Button appearance="ghost" arrow="down">кнопка 2</Button>
       <P size='s'>Small</P>
       <P size='m'>Medium</P>
