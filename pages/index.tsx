@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
-import { Button, Htag, P, Tag } from "@/components/index";
-import { log } from "console";
+import { Button, Htag, P, Tag, Rating } from "@/components/index";
+
 
 
 
@@ -29,6 +29,7 @@ export default function Home(): JSX.Element {
       <Tag color='green'>green</Tag>
       <Tag color='grey'>grey</Tag>
       <Tag color='primary'>primary</Tag>
+      <Rating rating={4}/>
     </>
   )
 }

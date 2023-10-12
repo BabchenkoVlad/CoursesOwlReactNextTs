@@ -21,7 +21,7 @@ export const Button = ({ appearance, arrow = 'none', children, className, ...pro
       >
         <Image
             className='arrowIcon'
-            src="/Vector.svg"
+            src="./Vector.svg"
             alt="Next.js Logo"
             width={10}
             height={10}
