@@ -29,5 +29,8 @@
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "devDependencies": {
+    "@svgr/webpack": "^5.5.0"
+  }
 }

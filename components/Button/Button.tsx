@@ -1,7 +1,8 @@
 import styles from './Button.module.css';
 import { ButtonProps } from './Button.props';
 import cn from 'classnames';
-import Image from 'next/image';
+// import Image from 'next/image';
+import Vector from './Vector.svg';
 
 
 export const Button = ({ appearance, arrow = 'none', children, className, ...props }: ButtonProps): JSX.Element => {
@@ -19,14 +20,15 @@ export const Button = ({ appearance, arrow = 'none', children, className, ...pro
         [styles.down]: arrow == 'down'
       })}
       >
-        <Image
+        {/* <Image
             className='arrowIcon'
             src="./Vector.svg"
             alt="Next.js Logo"
             width={10}
             height={10}
             priority
-          />
+          /> */}
+          <Vector/>
       </span>}
     </button>
   )

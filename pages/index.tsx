@@ -1,19 +1,18 @@
 import React, {useEffect, useState} from "react";
 import { Button, Htag, P, Tag, Rating } from "@/components/index";
+import { withLayout } from "@/layout/Layout";
 
 
 
-
-export default function Home(): JSX.Element {
+function Home(): JSX.Element {
+  const [rating, setRating] = useState<number>(3)
   const [counter, setCounter] = useState<number>(0);
 
   useEffect(() => {
     console.log('Counter ' + counter);
     return function cleanUp() {
       console.log('unmount ');
-      
     }
-    
   })
 
   return (
@@ -29,7 +28,9 @@ export default function Home(): JSX.Element {
       <Tag color='green'>green</Tag>
       <Tag color='grey'>grey</Tag>
       <Tag color='primary'>primary</Tag>
-      <Rating rating={4}/>
+      <Rating rating={rating} isEditable setRating={setRating}/>
     </>
   )
 }
+
+export default withLayout(Home);
